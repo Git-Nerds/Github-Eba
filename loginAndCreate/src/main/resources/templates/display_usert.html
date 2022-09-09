@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Result</title>
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css"
+        th:href="@{/css/display_form.css}" />
+</head>
+<body>
+<h2>Information</h2>
+<table>
+  <tbody>
+  <tr>
+    <td><strong>E-mail:</strong></td>
+    <td><span th:text="${users.email}"></span></td>
+  </tr>
+  <tr>
+    <td><strong>First-Name:</strong></td>
+    <td><span th:text="${users.firstName}"></span></td>
+  </tr>
+  <tr>
+    <td><strong>Last-Name:</strong></td>
+    <td><span th:text="${users.lastName}"></span></td>
+  </tr>
+  <tr>
+    <p>Please Go to your email and Just use information to login and activate your account Click <a href="https://gmail.com/"> G-Mail</a></p>
+    <td colspan="2">&nbsp;<a th:href="@{logint}"
+                             class="btn btn-success"> <i class="fa fa-arrow-circle-o-left"></i>&nbsp;
+      Login
+    </a></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

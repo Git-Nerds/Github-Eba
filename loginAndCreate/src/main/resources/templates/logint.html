@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <style>
+
+body {
+
+  background-color: blue;
+  background-image: url('./bgleft.png');
+  background-position: top left;
+  background-repeat: no-repeat;
+
+  width:100px;
+  height: 100px;
+}
+/*
+#div11{
+  background-image: url('./bgleft.png');
+  background-color: blue;
+  background-repeat: no-repeat;
+width:100%;
+} */
+
+*{
+  /* justify-content: center; */
+  color:#6a6f8c;
+  font:600 16px/18px 'Open Sans',sans-serif;
+z-index: 1;
+}
+
+
+.bgc{
+  margin: auto;
+  margin-top: 100px;
+  background-color: ghostwhite;
+
+  Width: 550px;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+}
+
+#fn1, #fn2
+{
+  border-radius: 30px 0px 0px 7px;
+}
+#ln1 , #ln2{
+  border-radius: 0px 7px 30px 0px;
+}
+ #em1, #dep1,
+ #em2, #pwd1, #pwd2 {
+   border-radius: 30px 7px 30px 7px;
+ }
+#bt1, #bt2{
+
+  margin-left: 20%;
+  border-radius: 50px 7px 50px 7px;
+  border-color: inherit;
+  width: 150px;
+  height: 50px;
+  color: white;
+  /* background-color: #00cc7a; */
+  background-color: mediumseagreen;
+}
+#bt1:hover, #bt2:hover{
+  border-radius: 50px 10px 50px 10px;
+  /* border-color: #00cc7a; */
+  border-color: lightblue;
+  width: 150px;
+  height: 50px;
+  color: white;
+  /* background-color: #00cc7a; */
+  /* background-color: mediumseagreen */
+  background-color: blue;
+}
+
+#bt3 {
+  /* border-style: none;
+  background-color: inherit; */
+  position: relative;
+  top: 138px;
+  left: 226.5px;
+  border-radius: 50px 5px 50px 5px;
+  border-color: whitesmoke;
+  width: 200px;
+  height: 30px;
+  color: gray;
+  background-color:lightgray;
+  font-family: sans-serif;
+  /* font-size: 12px; */
+
+
+}
+
+
+
+.forebox {
+
+  margin: auto;
+
+
+  width:100%;
+  height:500%;
+  border-radius: 25px;
+  box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+  display: flex;
+  background-color: whitesmoke;
+  justify-content: center;
+  align-content: center;
+
+z-index: 2;
+
+}
+
+
+.intbox{
+  padding: 50px;
+
+
+}
+
+.dd {
+  color; gray;
+  z-index: 3;
+}
+
+.intbox .signup-s ,
+.intbox .signup-t {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+margin-left: -55px;
+margin-right: -55px;
+transform: rotateY(180deg);
+backface-visibility: hidden;
+transition: all .4s linear;
+
+
+}
+
+
+.logger {
+  position: relative;
+  perspectivetitle>Log in: 1000px;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+
+.taby {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-right: 15px;
+  padding-bottom: 5px;
+  display:inline-block;
+  border-bottom: 2px solid transparent;
+
+}
+.taby:hover{
+  cursor: pointer;
+  color: darkgray;
+}
+
+
+
+.tea, .stu, .checky{
+  display: none;
+}
+
+.stu:checked + .taby,
+.tea:checked + .taby{
+  color:green;
+  border-color: green;
+}
+
+.icon {
+  width:20px;
+  height:20px;
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  background: ivory;
+}
+label .icon:before,
+label .icon:after{
+content:'';
+width:10px;
+height: 5px;
+background-color: cornflowerblue;
+position: absolute;
+transition: all .2s ease-in-out 0s;
+
+}
+
+.icon:before{
+left:3px;
+width: 5px;
+bottom: 6px;
+transform: scale(0) rotate(0);
+}
+
+.icon:after{title>Log in
+  top: 6px;
+  right:0;
+  transform: scale(0) rotate(0);
+}
+
+.logger .checky:checked + label {
+  color: gray;
+}
+.logger .checky:checked + label .icon{
+  /* color: blue; */
+}
+
+.logger .checky:checked + label .icon:before{
+  transform: scale(1) rotate(45deg);
+}
+.logger .checky:checked + label .icon:after{
+  transform: scale(1) rotate(-45deg);
+}
+
+.stu:checked + .taby + .tea + .taby + .logger .signup-s {
+  transform: rotate(0);
+}
+
+.tea:checked + .taby + .logger .signup-t{
+  transform: rotate(0);
+}
+
+div a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  margin-left: -40px;
+}
+.foot {
+  /* display: flex; */
+  /* justify-content: flex-end; */
+
+}
+
+/* .hr1 {
+  height:2px;
+
+	background: lightgray;
+}
+.hr2 {
+  height:2px;
+
+	background: lightgray;
+} */
+    </style>
+</head>
+<body class="bgc ">
+
+<div class="forebox">
+    <div class="intbox">
+        <input id="tab-1" type="radio" name="tab" class="stu" checked><label for="tab-1" class="taby">Student</label>
+        <input id="tab-2" type="radio" name="tab" class= "tea"><label for="tab-2" class="taby">Teacher</label>
+        <div class="logger">
+            <form action="/logins" method="post" class="signup-s">
+                <div class="form-floating mt-3 md-3 ">
+                    <input id="em1" type="email" class="form-control" placeholder="Enter email" name="email"  required>
+                    <label for="em1"  style="color: gray;">Email</label>
+                </div>
+                <div class="form-floating mt-3 md-3 ">
+                    <input id="pwd1" type="password" class="form-control" name="password" placeholder="Enter your password"  required>
+                    <label for="pwd1"  style="color: gray;">Password</label>
+                </div>
+                <div class="mt-3">
+                    <input id="rem" type="checkbox" name="remember-me" class="checky">
+                    <label for="rem"><span class="icon"></span>Remember Me</label>
+                </div>
+                <div class="mt-4">
+                    <input type="submit" class=" w3-large text-center" id="bt1" name="button1" value="Log In">
+                </div>
+                <div class="hr1"></div>
+                <div class="foot" style="position: relative; top: 2em;">
+                    <a href="#">Forgot Password?</a> <br>
+                    <a href="#">Don't have an account?</a>
+                </div>
+            </form>
+<!--            <form action="/logins" class="signup-t">-->
+<!--                <div class="form-floating mt-3 md-3 ">-->
+<!--                    <input id="em2" type="email" class="form-control" placeholder="Enter email" name="email" required>-->
+<!--                    <label for="em2"  style="color: gray;">Email</label>-->
+<!--                </div>-->
+<!--                <div class="form-floating mt-3 md-3 ">-->
+<!--                    <input id="pwd2" type="password" class="form-control" placeholder="Enter your password" required>-->
+<!--                    <label for="pwd2" style="color: gray;">Password</label>-->
+<!--                </div>-->
+<!--                <div class="mt-3">-->
+<!--                    <input id="rem1" type="checkbox" name="" class="checky">-->
+<!--                    <label for="rem1" ><span class="icon"></span>Remember Me</label>-->
+<!--                </div>-->
+<!--                <div class="mt-4">-->
+<!--                    <input type="submit" class="text-center" id="bt2" name="button2" value="Log In">-->
+<!--                    <input type="submit" class="text-center" id="bt3" name="button3" value="Log In As An Admin">-->
+<!--                </div>-->
+<!--                <div class="hr2"></div>-->
+<!--                <div class="foot">-->
+<!--                    <a href="#">Forgot Password?</a> <br>-->
+<!--                    <a href="#">Don't have an account?</a>-->
+<!--                </div>-->
+<!--            </form>-->
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

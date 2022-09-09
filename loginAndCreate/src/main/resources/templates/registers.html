@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="signup.css" type="text/css"> -->
+     <!-- <link href="/home/eba/Desktop/Dev Trial/img copy/erfg.css" rel="stylesheet" type="text/css"> -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <style>
+
+
+    body {
+
+      background-color: blue;
+      background-image: url('https://lh6.googleusercontent.com/_REGR7Cgtx6ZDRV7D3FlBVEB093YImWWSDNq5Jk_I5lJlKdTwYSfRBRI5rvUmUc6LQo=w2400');
+      background-position: top left;
+      background-repeat: no-repeat;
+
+      width:100px;
+      height: 100px;
+    }
+    /*
+    #div11{
+      background-image: url('./bgleft.png');
+      background-color: blue;
+      background-repeat: no-repeat;
+    width:100%;
+    } */
+
+    *{
+      /* justify-content: center; */
+      color:#6a6f8c;
+      font:600 16px/18px 'Open Sans',sans-serif;
+    z-index: 1;
+    }
+
+
+    .bgc{
+      margin: auto;
+      margin-top: 100px;
+      background-color: ghostwhite;
+
+      Width: 550px;
+      z-index: -1;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+    }
+
+    #fn1, #fn2
+    {
+      border-radius: 30px 0px 0px 7px;
+    }
+    #ln1 , #ln2{
+      border-radius: 0px 7px 30px 0px;
+    }
+     #em1, #dep1,
+     #em2 {
+       border-radius: 30px 7px 30px 7px;
+     }
+    #bt1, #bt2{
+      border-color: inherit;
+      margin-left: 20%;
+      border-radius: 50px 12px 50px 12px;
+      width: 150px;
+      height: 50px;
+      color: white;
+      background-color: limegreen;
+    }
+    #bt1:hover, #bt2:hover{
+      border-radius: 50px 8px 50px 8px;
+      border-color: limegreen;
+      width: 155px;
+      height: 50px;
+      color: white;
+      background-color: limegreen;
+    }
+
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    .forebox {
+
+      margin: auto;
+
+
+      width:100%;
+      height:500%;
+      border-radius: 25px;
+      box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+      display: flex;
+      background-color: whitesmoke;
+      justify-content: center;
+      align-content: center;
+
+    z-index: 2;
+
+    }
+
+
+    .intbox{
+      padding: 50px;
+
+
+    }
+
+    .dd {
+      color; gray;
+      z-index: 3;
+    }
+
+    .intbox .signup-s ,
+    .intbox .signup-t {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-left: -55px;
+    margin-right: -55px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all .4s linear;
+
+
+    }
+
+
+    .logger {
+      position: relative;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      z-index: 1;
+    }
+
+    .taby {
+      text-transform: uppercase;
+      font-size: 18px;
+      margin-right: 15px;
+      padding-bottom: 5px;
+      display:inline-block;
+      border-bottom: 2px solid transparent;
+
+    }
+    .taby:hover{
+      cursor: pointer;
+      color: darkgray;
+    }
+
+
+
+    .tea, .stu, .checky{
+      display: none;
+    }
+
+    .stu:checked + .taby,
+    .tea:checked + .taby{
+      color:green;
+      border-color: green;
+    }
+
+    label .icon:before,
+    label .icon:after{
+    content:'';
+    width:10px;
+    height: 2px;
+    background-color: #fff;
+    transition: all .2s ease-in-out 0s;
+
+    }
+
+    .icon:before{
+    left:3px;
+    width: 5px;
+    bottom: 6px;
+    transform: scale(0) rotate(0);
+    }
+
+    .icon:after{
+      top: 6px;
+      right:0;
+      transform: scale(0) rotate(0);
+    }
+
+    .logger .check:checked + label .icon:before{
+      transform: scale(1) rotate(-45deg);
+    }
+    .logger .check:checked + label .icon:after{
+      transform: scale(1) rotate(-45deg);
+    }
+
+
+    .stu:checked + .taby + .tea + .taby + .logger .signup-s {
+      transform: rotate(0);
+    }
+
+    .tea:checked + .taby + .logger .signup-t{
+      transform: rotate(0);
+    }
+    #ft1{
+       padding-top: 10px;
+    }
+  #ft1:hover{
+      font-color: black;
+  }
+
+    </style>
+  </head>
+  <body class="bgc ">
+  <div class="forebox">
+    <div class="intbox">
+      <input id="tab-1" type="radio" name="tab" class="stu" checked><label for="tab-1" class="taby">Student</label>
+      <input id="tab-2" type="radio" name="tab" class= "tea"><label for="tab-2" class="taby">Teacher</label>
+      <div class="logger">
+        <form th:action="@{/save}" th:object="${users}" method="post" class="signup-s">
+          <div class="form-floating input-group mt-4 md-3" >
+            <input id="fn1" type="text" class="form-control dd" th:field="*{firstName}" placeholder="First Name" required>
+            <label for="fn1" style="color: gray; z-index: 3;" >First Name</label>
+            <input id="ln1" type="text"  class="form-control" th:field="*{lastName}" placeholder="Last Name"  required>
+            <label for="ln1"  style="color: gray; z-index: 3;">&emsp; &emsp; &emsp; &emsp;
+              &emsp; &emsp; &emsp; &emsp; &emsp; Last Name</label>
+          </div>
+          <div class="form-floating mt-3 md-3 ">
+            <input id="em1" type="email" class="form-control" th:field="*{email}" placeholder="Enter email" name="email"  required>
+            <label for="em1"  style="color: gray;">Email</label>
+          </div>
+          <div class="mt-4">
+            <input type="submit" class=" w3-large text-center" id="bt1" name="button1" value="Sign Up">
+          </div>
+          <div align="center" class="foot" style="position: relative; top: 1.5em;">
+            <a th:href="@{logins}">Already have an account?</a>
+          </div>
+        </form>
+        <form th:action="@{/savet}" th:object="${users}" method="post" class="signup-t">
+          <div class="form-floating input-group mt-4 md-3 ">
+            <input id="fn2"type="text" class="form-control dd" th:field="*{firstName}" placeholder="First Name" required>
+            <label for="fn2" style="color: gray; z-index: 3;">First Name</label>
+            <input id="ln2"type="text"  class="form-control" th:field="*{lastName}" placeholder="Last Name" required>
+            <label for="ln2" style="color: gray; z-index; 3;">&emsp; &emsp; &emsp; &emsp;
+              &emsp; &emsp; &emsp; &emsp; &emsp; Last Name</label>
+          </div>
+          <div class="form-floating mt-3 md-3 ">
+            <input id="em2" type="email" class="form-control" th:field="*{email}" placeholder="Enter email" name="email" required>
+            <label for="em2"  style="color: gray;">Email</label>
+          </div>
+          <div class="form-floating mt-3 md-3 ">
+            <input id="em2" type="email" class="form-control" th:field="*{department}" placeholder="Enter Department" name="department" required>
+            <label for="em2"  style="color: gray;">Department</label>
+          </div>
+          <div class="mt-4">
+            <input type="submit" class="text-center" id="bt2" name="button2" value="Sign Up">
+          </div>
+          <div align="center" id="ft1" class="foot" style="position: relative; top: 1.5em;">
+            <a th:href="@{logins}">Already have an account?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
