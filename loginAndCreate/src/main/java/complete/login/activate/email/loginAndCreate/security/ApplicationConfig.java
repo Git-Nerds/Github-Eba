@@ -18,49 +18,74 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 @AllArgsConstructor
 @EnableWebSecurity
-public class
-ApplicationConfig extends WebSecurityConfigurerAdapter {
+public class ApplicationConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
 
     @Autowired
-    private CustomLoginSuccessHandler sucessHandler;
+    private CustomLoginSuccessHandler successHandler;
     @Autowired
     private final UserService userService;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
        http
+               // CSRF DISABLE, ANT MATCHERS, SETTING SECURITY FOR HTTPS
                .csrf().disable()
                .authorizeRequests()
-               .antMatchers("/logins").permitAll()
-               .antMatchers("/save","/savet","/forgets","/registers","/edit/{email}").permitAll()
-               .antMatchers("/newt").hasAuthority("TEACHER")
-               .antMatchers("/news").hasAnyAuthority("STUDENT","TEACHER")
+               .antMatchers("/logins","/index","/").permitAll()
+               .antMatchers("static/**",
+                                        "css/**").permitAll()
+               .antMatchers("/edit","/send","/save","/save/teacher","/forgets","/registration","/edit/{email}","/forgetConfirmation",
+                       // Password And Reset Process
+                       "/forget_password","/reset_password","message"
+                       ).permitAll()
+               .antMatchers("/teacherPage").hasAuthority("TEACHER")
+               .antMatchers("/studentPage").hasAnyAuthority("STUDENT","TEACHER","ADMIN","SUPER")
+               .antMatchers("/adminPage").hasAnyAuthority("ADMIN","SUPER")
+               .antMatchers("/superAdminPage",
+               "/addAdminsSuper","/addAdmin","/save/super","/save/admin",
+               "/save/super/admin","/save","/registration","/logins","/display_user","/update","/update/{id}","/view","/view/{type}").permitAll()
+//               .antMatchers("/save/admin","/view").hasAnyAuthority("SUPER","ADMIN")
+//               .antMatchers("/display_user").hasAnyAuthority("USER","TEACHER","SUPER","ADMIN")
+//               .antMatchers("/addAdminsSuper").hasAuthority("SUPER")
+//               .antMatchers("/superAdminPage").hasAuthority("SUPER")
+//               .antMatchers("/save/super").hasAuthority("SUPER")
+//               .antMatchers("/addAdmin","/add-shop","/add").hasAnyAuthority("SUPER","ADMIN")
+
+             // HTTPS CODE
+               //  .and()
+//              .requiresChannel()
+//              .anyRequest()
+//              .requiresSecure()
                .anyRequest()
                .authenticated()
                .and()
+
+               // LOGIN PAGE
                .formLogin().permitAll()
+               .successForwardUrl("/logins")
                .loginPage("/logins")
                .failureUrl("/login?error=true")
-               .successHandler(sucessHandler)
-               .usernameParameter("username")
+               .successHandler(successHandler)
+               .usernameParameter("email")
                .passwordParameter("password")
-//               .successForwardUrl("/news")
-//               .defaultSuccessUrl("/news", true)
                .and()
-               .rememberMe()
-               .rememberMeParameter("remember-me")
-               .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(21))
-               .key("somethingverysecured")
-               .and()
+              // REMEMBER-ME
+//               .rememberMe()
+//               .rememberMeParameter("remember-me")
+//               .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(30))
+//               .key("somethingverysecured")
+//               .and()
                .logout()
                .logoutUrl("/logout")
                .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET"))
                .clearAuthentication(true)
                .invalidateHttpSession(true)
-               .deleteCookies("JSESSIONID","remember-me")
-               .logoutSuccessUrl("/logins").and()
+               .deleteCookies("JSESSIONID")
+               .logoutSuccessUrl("/logins")
+               .and()
                .exceptionHandling()
                .accessDeniedPage("/access-denied");
 
@@ -81,20 +106,5 @@ ApplicationConfig extends WebSecurityConfigurerAdapter {
 
         return provider;
     }
-
-//    @Bean
-//    @Override
-//    protected UserDetailsService userDetailsService() {
-//        UserDetails gutu = User.builder()
-//                .password(passwordEncoder.encode("gutu"))
-//                .username("gutu")
-//                .authorities(TECHNICIAN.grantedAuthorities())
-//                .build();
-//
-//        return new InMemoryUserDetailsManager(
-//                gutu
-//        );
-//
-//    }
 
 }

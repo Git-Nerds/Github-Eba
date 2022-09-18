@@ -14,29 +14,16 @@
 body {
 
   background-color: blue;
-  background-image: url('https://lh6.googleusercontent.com/_REGR7Cgtx6ZDRV7D3FlBVEB093YImWWSDNq5Jk_I5lJlKdTwYSfRBRI5rvUmUc6LQo=w2400');
+  background-image: url("https://lh6.googleusercontent.com/_REGR7Cgtx6ZDRV7D3FlBVEB093YImWWSDNq5Jk_I5lJlKdTwYSfRBRI5rvUmUc6LQo=w2400");
+<!--  background-image: url("https://drive.google.com/file/d/15bomb4aI2nHU-QO0h1yjQ4d_QeRyjMzI/view?usp=sharing")-->
+<!--  background-image: url("https://doc-08-9k-docs.googleusercontent.com/docs/securesc/8d9lofi6jn3tcvkbpgt7eq3vagkud828/8rpdhd56lt04okkp667ivui3j7jb92t6/1663246050000/10049020936761471701/10049020936761471701/15bomb4aI2nHU-QO0h1yjQ4d_QeRyjMzI?e=view&ax=AI9vYm5Sa7nfPT9ZJnqYgnBk9vt3OM9RiY_HTakUR35f0FmNvNJ5NEJ7FwCzLT_oQ7DwifSTRe94xPX8C_XaNVHCpowAIMF0XUuWxJfncFPYsyt_H9fCtC-MwJ03H6yYKN9dDHIdZxLRFyWKciJuGNnYo8A8lf4MRmZI1Oz0WGuxXirLo5iAHFHB4B9i2bGFfTyexj82PNaZU3dCjp7eDZeP6CkZd6w_w9aCP_d5CqsD2sawfHTfvZDjsY_tKeCgEG_OCkIO9a9b68wsJVAce110H0V7k9SF_Xf5PcwQawPPHzycs95v2_lAw-dNqPDQfLmftps2MT8Zfehv-1MQ9rU3onfHSHERvJk-SC-gJ19gjTHCYZd-bzQLqrt-5le7sC5bERtcvBcdEkrugra2QacX4VjWVBDu4sRLeOfJQR2bwku-HdWvZnw01SAEcmpQpBCo8V93KkhH61sSFwnrc2bQGvTlkZEvtkG3BBGvF0tthfSW9F4ihgwsqrZatBsTU6Bn8c2X9N5PTBs0Y_p1LHREnCuy_S6Z4R5aWl-XCQtwarVeBF8r05bKXt_QTQ1f4hzDimQ8xDnHuJEYfuq0jJewzUaCDJt79Umjbk0IXgOI5zPM0b16054EbWXES-JoZARgQBccDm3nkNu3JG6slKRtYocq-Rq-7Iz07-FAGXzILG3yUf6U7RlQGSX15tW9tE6hoMLfACF0IvilToqSV0mpzrDIbPNNvzIWvJbiBm3f7XBMcYlC3BRcX14ChRYxR6hEezX9Y1TefZPxjvBZbLZCcdUSsci47U0Wm1u_f6F_AM9_R-BVoy10QD_KJ9sslFerykubg1meVBUDQm8IR8O1VN1-HtaGiQ&uuid=07264381-2069-4d4d-b7ae-b3bede1fb537&authuser=0&nonce=vmhv6j3hmsge4&user=10049020936761471701&hash=0qqglbhgsq72gudclv21b1tolaflf490");-->
+
   background-position: top left;
   background-repeat: no-repeat;
 
   width:100px;
   height: 100px;
 }
-/*
-#div11{
-  background-image: url('./bgleft.png');
-  background-color: blue;
-  background-repeat: no-repeat;
-width:100%;
-} */
-
-*{
-  /* justify-content: center; */
-  color:#6a6f8c;
-  font:600 16px/18px 'Open Sans',sans-serif;
-z-index: 1;
-}
-
-
 .bgc{
   margin: auto;
   margin-top: 100px;
@@ -273,13 +260,13 @@ margin-left: 17px;
 } */
     </style>
 </head>
-<body class="bgc ">
+<body class="bgc" style="background-image: url('https://lh6.googleusercontent.com/_REGR7Cgtx6ZDRV7D3FlBVEB093YImWWSDNq5Jk_I5lJlKdTwYSfRBRI5rvUmUc6LQo=w2400');">
 <div class="forebox">
     <div class="logger">
         <b><h2 id="login11" align="center" >Login</h2></b>
         <form action="/logins" method="post" class="signup-s">
             <div class="form-floating mt-3 md-3 ">
-                <input id="em1" type="email" class="form-control" placeholder="Enter email" name="username"  required>
+                <input id="em1" type="email" class="form-control" placeholder="Enter email" name="email"  required>
                 <label for="em1"  style="color: gray;">Email</label>
             </div>
             <div class="form-floating mt-3 md-3 ">
@@ -296,7 +283,7 @@ margin-left: 17px;
             <div class="hr1"></div>
             <div class="foot" style="position: relative; top: 2em;">
                 <a th:href="@{forgets}">Forgot Password?</a> <br>
-                <a th:href="@{registers}">Don't have an account?</a>
+                <a th:href="@{registration}">Don't have an account?</a>
             </div>
         </form>
     </div>

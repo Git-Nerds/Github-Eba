@@ -176,7 +176,7 @@ public class mailSenderImpl implements mailSenderService {
                 "             </td>\n" +
                 "           </tr>\n" +
                 "         </table>\n" +
-                "\t\t\t\t <p style=\"padding-top:30px; padding-left:40px; text-size:35px;\">Hello, "+fName+"</p>\n" +
+                "\t\t\t\t <p style=\"padding-top:30px; padding-left:40px; text-size:35px;\">Hello </p>\n" +
                 "       </td>\n" +
                 "     </tr>\n" +
                 "\t\t <tr>\n" +
@@ -215,8 +215,8 @@ public class mailSenderImpl implements mailSenderService {
                 "\t\t\t\t\t\t\t\t\t\t<table  class=\"content\">\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t<tr>\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">Activate Your Account</p>\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">By login using this password sends you by generating " +
-                "random password </p>\n" +
+                "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">Activate your Account Using the Below Link and you can Change your password " +
+                " </p>\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t</tr>\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t<tr>\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t\t<td style=\"padding: 10px;\">\n" +
@@ -224,8 +224,9 @@ public class mailSenderImpl implements mailSenderService {
                 "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">Please use those available information to login</p>\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">     </p>\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">Email : "+email+"</p>\n" +
+                "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">Activation Link : </p>\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">Password : "+password+"</p>\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">Welcome again on our portal</p>\n" +
+                "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">Ignore this email if you have not made the request or remember your password</p>\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t\t</td>\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t</tr>\n" +
                 "\t\t\t\t\t\t\t\t\t\t</table>\n" +
@@ -527,7 +528,7 @@ public class mailSenderImpl implements mailSenderService {
                 "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">Please use those available information to login</p>\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">     </p>\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">Email : "+email+"</p>\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">Password : "+password+"</p>\n" +
+                "\t\t\t\t\t\t\t\t\t\t\t\t<p><a href=\"" + password + "\">Change my password</a></p>"+
                 "\t\t\t\t\t\t\t\t\t\t\t\t<p id=\"p43\">Forget Password request</p>\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t\t</td>\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t</tr>\n" +

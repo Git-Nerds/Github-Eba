@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!--    <link href="erfg.css" rel="stylesheet" type="text/css">-->
+<!--    <link rel="stylesheet" href="headerback.css" type="text/css">-->
+<!--    <link rel="stylesheet" type="text/css" href="newStyle.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="unique.css">-->
+   <title>Home</title>
+    <style media="screen">
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@font-face {font-family: "Cascade Script"; src: url("//db.onlinewebfonts.com/t/22906b09ef35e9455a9ed0e698e67c1e.eot"); src: url("//db.onlinewebfonts.com/t/22906b09ef35e9455a9ed0e698e67c1e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/22906b09ef35e9455a9ed0e698e67c1e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/22906b09ef35e9455a9ed0e698e67c1e.woff") format("woff"), url("//db.onlinewebfonts.com/t/22906b09ef35e9455a9ed0e698e67c1e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/22906b09ef35e9455a9ed0e698e67c1e.svg#Cascade Script") format("svg");
+@import url(//db.onlinewebfonts.com/c/22906b09ef35e9455a9ed0e698e67c1e?family=Cascade+Script);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+
+  box-sizing: border-box;
+}
+
+      .verto {
+        position: absolute; right: 140px;
+        margin-top: 28px;
+        border-right: 6px solid blueviolet;
+        height: 50px;
+        }
+.backg {
+  background-image: url("https://drive.google.com/uc?export=view&id=1gF5hMhMK6ZNhbHtOkMDUF_hnhBSG9qIf");
+  background-position: 63% -300px;
+  background-repeat: repeat-y;
+  background-size: 1000px;
+  background-origin: content-box;
+
+}
+
+.bgclr {
+  /* background-color: rgb(94.5, 92.9, 93.3); */
+  background-color: rgb(241, 237, 238);
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 18px;
+}
+/* Clear floats after image containers
+<li><a class="dropdown-item" href="#">HighSchool</a></li>
+*/
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+header{
+   font-family: "Poppins", sans-serif ,bold;
+}
+#navbar{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+
+}
+#hv1{
+  text-decoration: none;
+}
+
+#gutu1{
+  margin-left: 30px;
+  color: red;
+text-decoration: none;
+}
+#pp_1{
+    text-decoration: none;
+  color:honeydew;
+  padding-bottom: 5px;
+    font-size: larger;
+}
+.dropdown-item {
+  color:blue;
+}
+.dropdown-item:hover{
+  background-color:#008000;
+  border: 2px inset #b3ffb3;
+  border-radius: 5px;
+
+  color: white;
+}
+
+.image_1_1{
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+#pp_2{
+
+  color:honeydew;
+  padding-bottom: 5px;
+  /* font-size:; */
+}
+
+
+
+#img1{
+  max-width: 50%;
+  height: auto;
+}
+#img2{
+  margin-left: 150px;
+  max-width: 100%;
+  height: auto;
+}
+
+#img3 {
+  width: 90%;
+  height: 75%;
+
+  overflow: hidden;
+}
+
+#div13{
+  background-color: #0B0B45;
+
+  padding: 20px 20px;
+}
+#h21{
+
+  margin-left: 80px;
+}
+#pp1{
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+#h11{
+  padding-top: 200px;
+font-size: 50px;
+color: blue;
+text-align:center;
+font-family: "Poppins", sans-serif ,bold;
+font-style: italic;
+margin-bottom: 20px;
+font-weight: bolder;
+text-decoration: none;
+}
+#txt1{
+  text-decoration: none;
+  text-shadow: 2.5px 2.5px;
+  color: DarkBlue;
+  font-size: 70px;
+
+}
+#txt3{
+  text-decoration: none;
+    text-shadow: 0.5px 0.5px;
+  color: DarkBlue;
+  font-size: 60px;
+}
+#txt1:hover{
+  font-size: 80px;
+    color: #8B0000;
+    margin-bottom: -50px;
+    overflow: auto;
+
+}
+#txt3:hover{
+  font-size: 40px;
+  font-style: italic;
+    color: 	#FF8C00;
+}
+
+#succ_{
+  text-align: center;
+  color: blueviolet;
+  font-size:40px;
+  font-style:normal;
+  font-family: "fantasy";
+  font-weight: bold;
+}
+span a {
+  text-decoration: none;
+}
+span a:hover{
+  color: #E79322;
+}
+
+.clr{
+  font-weight: bolder;
+	color: blueviolet;
+   font-family: "Poppins", sans-serif,bold;
+   margin-left: 10px;
+
+}
+
+#h222{
+    margin-left: 50px;
+  text-align: right;
+  height: auto;
+}
+
+
+
+#pic_1{
+  width: 100px;
+}
+#h3{
+	margin-left: 200px;
+	font-size: 15px;
+margin-right: 40px;
+}
+#h2{
+text-align: center;
+margin: 20px;
+font-size: 12px;
+padding-right: 20px;
+font-weight: bolder;
+color: blueviolet;
+ font-family: "Poppins", sans-serif,bold;
+}
+/* #h2:hover{
+  color: DarkBlue;
+  font-size:21px; */
+
+}
+#acc{
+font-size: 10px;
+font-weight: bolder;
+color: blueviolet;
+ font-family: "Poppins", sans-serif,bold;
+}
+/* #acc:hover{
+  color: DarkBlue;
+  font-size:21px;
+} */
+@import "newStyle.css";
+
+@keyframes homye {
+  0% {font-size: 15px;
+    color: blueviolet;}
+  5% {color: DarkBlue;
+      font-size:21px;}
+  15% {color: DarkBlue;
+      font-size:21px;}
+  30% {color: DarkBlue;
+      font-size:21px;}
+  60% {color: DarkBlue;
+      font-size:21px;}
+  100% {color: DarkBlue;
+      font-size:21px;}
+}
+
+@keyframes imej {
+  from {width: 90%;
+  height: 75%;
+  overflow: hidden;}
+  to {  object-fit: none;}
+}
+
+#h2:hover, #acc:hover{
+  animation-name: homye;
+  animation-duration: 17s;
+  animation-iteration-count: infinite;
+
+}
+
+#img3:hover{
+  animation-name: imej;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: 2;
+}
+
+
+body{
+
+  background-image: url("https://drive.google.com/uc?export=view&id=1qkQj5ehY79Me4PhItPnOKqMF2C3ge4sU");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: "Poppins", sans-serif;
+	color: burlywood;
+  background-color: #fff;
+}
+
+body footer{
+  margin-top: 100px;
+  margin-bottom: 0px;
+padding-bottom: 0px;
+   background-color: #2E0909;
+}
+
+.social-text {
+  padding: 0.7rem 0;
+  font-size: 1rem;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.45rem;
+  color:  #F5F5F5;
+  border-radius: 50%;
+  border: 1px solid #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  color: #4481eb;
+  border-color: #4481eb;
+
+  height: 56px;
+  width: 56px;
+
+}
+
+#follow{
+  font-family: "serif", cursive;
+  text-align: center;
+  font-size: 20px;
+  color: blueviolet;
+  margin-bottom: 10px;
+}
+#footr{
+  font-family: "serif", sans-serif;
+  text-align: center;
+  font-size: 15px;
+  color: wheat;
+}
+
+#link_1{
+  color:honeydew;
+  padding-bottom: 5px;
+  font-size: larger;
+  text-decoration: none;
+}
+
+.downbor {
+  max-height: 200px;
+}
+
+</style>
+
+    <!-- /*
+          //NOT CONVERTED
+
+    //METTU
+    https://drive.google.com/file/d/1eRA8FxijHvzjjkHziltQZsWYX4GPOUqu/view?usp=sharing
+
+    //BISHAN
+    https://drive.google.com/file/d/1qkQj5ehY79Me4PhItPnOKqMF2C3ge4sU/view?usp=sharing
+
+    //University
+
+    https://drive.google.com/file/d/1CzxNZjRiM7-4ucsuYRwxJVkdohvqt27S/view?usp=sharing
+
+    https://drive.google.com/file/d/1kzqrQRvULth9Q0DJJbTht0Ixi9FD-aDA/view?usp=sharing
+
+    //PROTO
+    https://drive.google.com/uc?export=view&id=15bomb4aI2nHU-QO0h1yjQ4d_QeRyjMzI
+
+15bomb4aI2nHU-QO0h1yjQ4d_QeRyjMzI
+
+    1qkQj5ehY79Me4PhItPnOKqMF2C3ge4sU
+
+    1CzxNZjRiM7-4ucsuYRwxJVkdohvqt27S
+          // CONVERTED
+
+    //METTU IMAGE
+    https://drive.google.com/uc?export=view&id=1eRA8FxijHvzjjkHziltQZsWYX4GPOUqu
+
+    https://drive.google.com/uc?export=view&id=1qkQj5ehY79Me4PhItPnOKqMF2C3ge4sU
+
+    https://drive.google.com/uc?export=view&id=1CzxNZjRiM7-4ucsuYRwxJVkdohvqt27S
+
+    */ -->
+
+</head>
+<header>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light backg bgclr" style="position:fixed; top: 0px">
+        <a id="h222" class="navbar-brand" href="#"><img id="pic_1" src="https://drive.google.com/uc?export=view&id=1eRA8FxijHvzjjkHziltQZsWYX4GPOUqu" alt="logo" style="background-color: rgb(241, 237, 238)"></a>
+        <div class="container-fluid" >
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navbar-nav" id="navbarNavDropdown" style="justify-content: center;">
+                <!-- style="position: absolute; left: 20%"  -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a id="h2" class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="h2" class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Catagories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" th:href="@{/studentPage}">Elementary</a></li>
+                            <li><a class="dropdown-item" th:href="@{/studentPage}">HighSchool</a></li>
+                            <li><a class="dropdown-item" th:href="@{/studentPage}">University</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a id="h2" class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item"> <a id="h2" class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+                <div class="verto">
+
+                </div>
+                <ul style="list-style-type: none; text-align: left; position: absolute; right: 35px; margin-top: 5px; font-weight:bolder;">
+                    <li class="nav-item">
+                        <a id="acc" class="nav-link text-success" th:href="@{/logins}">Log in </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="acc" class="nav-link text-danger"  th:href="@{/registration}" style="margin-bottom: -23px;">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </nav>
+</header>
+<body>
+<!-- <div>
+  <h1 id="h11">
+    <span id="txt1" >W</span>
+    <span id="txt3" >e</span>
+    <span id="txt1" >L</span>
+    <span id="txt3" >c</span>
+    <span id="txt1" >O</span>
+    <span id="txt3" >m</span>
+    <span id="txt1" >E</span>
+  </h1>
+</div> -->
+
+<!-- <div id="succ_">Success Is Journey Not a Destiniction</div> -->
+
+<div class="image_1_1" style="padding-top: 600px;">
+    <!-- <img src="Images/img2.jpeg" alt="peoples" width="100%"> -->
+</div>
+
+
+<div id="div13"   >
+    <div class="row">
+        <div id="hv1" class="column">
+            <a id="link_1" th:href="@{/studentPage}">
+                <p id="pp_2"><b>Elementary</b></p>
+                <img id="img3" src="https://drive.google.com/uc?export=view&id=1fCbYlJkqz45bI-eAIj4z36YQhwjEkFmV">
+            </a>
+        </div>
+        <div id="hv1" class="column">
+            <a id="link_1" th:href="@{/studentPage}">
+                <p id="pp_2"><b>HighSchool</b></p>
+                <img id="img3" src="https://drive.google.com/uc?export=view&id=1kzqrQRvULth9Q0DJJbTht0Ixi9FD-aDA">
+            </a>
+        </div>
+        <div id="hv1" class="column">
+            <a id="link_1" th:href="@{/studentPage}">
+                <p id="pp_2"><b>University</b></p>
+                <img id="img3" src="https://drive.google.com/uc?export=view&id=1CzxNZjRiM7-4ucsuYRwxJVkdohvqt27S">
+            </a>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="app.js"></script>
+
+<script
+        src="https://kit.fontawesome.com/64d58efce2.js"
+        crossorigin="anonymous"
+></script>
+<footer>
+    <p id="follow">Follow Us <i class="fas fa-exclamation"></i></p>
+    <div class="social-media">
+        <a href="https://www.facebook.com/gutu.daniel.980/" class="social-icon" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/GeletaGutu?s=09" class="social-icon" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://t.me/gutudanii" class="social-icon" target="_blank">
+            <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://www.instagram.com/gutuyeshi/" class="social-icon" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/gutu-daniel" class="social-icon" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+    <p id="footr">&copy; <em id="date"></em> 2022 Copyright reserved by @Git-Nerds</p>
+</footer>
+
+</body>
+</html>
